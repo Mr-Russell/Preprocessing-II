@@ -1,1 +1,22 @@
 // Mixins in here
+.btn-style (@background, @txtColor) {
+    background-color: @background;
+    color: @txtColor;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5%;
+
+    @media (@mobile) {
+        width:100%;
+    }
+}
+
+
+
+.hover-anim(@new-color, @time){
+    color: saturate(@new-color, 90%);
+    background-color: orange;
+    transition: @time;
+}
